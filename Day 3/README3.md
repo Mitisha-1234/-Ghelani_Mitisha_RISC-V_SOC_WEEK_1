@@ -31,6 +31,36 @@ Cloning means duplicating a cell or module when one element is overloaded with t
 Retiming is when flip-flops are moved around inside the circuit without changing its overall behavior. By shifting registers before or after logic, the longest paths can be made shorter. This allows the design to run at a higher clock speed, balances delays between stages, and can even save power.
 
 ## Combinational Logic Optimizations
+Combinational logic optimization is the process of simplifying logic circuits without changing their function. It reduces the number of gates, shortens paths, and lowers power consumption. Common methods include Boolean algebra simplification, removing redundant logic, and factoring expressions. The goal is to make the design smaller, faster, and more efficient.
+
+We will perform the Combinational Logic Optimization for following verilog files:
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+
+Take the steps from the Day 1 Synthesis Lab, and insert the following commands in the flow right after abc -liberty but before synth -top.
+```bash
+opt_clean -purge
+```
+Do the same for all 7 files and observe the yosys output:
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png)
+![Alt Text](Palak_ysoys.png) (multiple_module_opt)
+![Alt Text](Palak_ysoys.png) (multiple_module_opt2)
+
+## Sequential Logic Optimizations
+Sequential logic optimization focuses on improving circuits that use memory elements like flip-flops and latches. The goal is to reduce area, power, and delay while keeping the same behavior. Common techniques include retiming (moving registers to balance delays), state optimization (simplifying FSMs), and register sharing or removal. These methods help designs run faster and use fewer resources. 
+
+I have shown one example of Sequential Logic Optimizations
+
+
 
 
 
