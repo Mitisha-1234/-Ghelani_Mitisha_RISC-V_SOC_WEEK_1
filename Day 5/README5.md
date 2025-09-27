@@ -38,26 +38,26 @@ An incomplete if or case construct occurs when not all possible input conditions
 There were in total 3 labs on Incomplete If Case. 
 One of the example is shown below.
 Below is the verilog file for incomp_if:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 incomp_if v" src="https://github.com/user-attachments/assets/df5dbc9c-bdb5-4597-8fe0-7725993053e8" />
 
 The gtkwave for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 tb_incom_if vcd" src="https://github.com/user-attachments/assets/255d1594-be3c-4cd3-884d-340114ef8584" />
 
 The Yosys output for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 incomp_if" src="https://github.com/user-attachments/assets/1677dec8-5e9c-4526-b898-588048b0c562" />
 
 ## Labs on "Incomplete Overlapping Case"
 An incomplete or overlapping case statement happens when either some input combinations are not covered or multiple case branches match the same input value. Incompleteness can lead to inferred latches, as the circuit may need to hold the previous output for unhandled inputs. Overlapping cases create ambiguity in synthesis, potentially resulting in unpredictable behavior. To prevent these issues, designers should ensure that all possible input values are addressed and that each case is mutually exclusive, often using a default branch for safety.
 There were in total 4 labs on Incomplete Overlapping Case. 
 One of the example is shown below.
 Below is the verilog file for comp_case:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 comp_case v" src="https://github.com/user-attachments/assets/f693bbd7-1fee-49ed-b8a0-6d970f6916a4" />
 
 The gtkwave for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 tb_comp_case vcd" src="https://github.com/user-attachments/assets/a53f6e86-ddd4-4297-bcd0-b99ec27599c9" />
 
 The Yosys output for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day5 comp_case" src="https://github.com/user-attachments/assets/4fdc9bb1-73bb-4529-8903-44924eea00c7" />
 
 ## for loop and for generate
 
@@ -82,32 +82,33 @@ endgenerate
 
 ## Labs on "for loop" and "for generate"
 Verilog Code for 4x1 MUX using For Loop:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 mux_generate v" src="https://github.com/user-attachments/assets/ff088308-7bd4-444d-88ab-1201c12ac50b" />
 
 It's gtkwave:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 mux_generate vcd" src="https://github.com/user-attachments/assets/f57be1e7-d0dd-4400-9030-20944e774545" />
 
 It's Yosys Output:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 mux_generate" src="https://github.com/user-attachments/assets/4cdeedac-55f3-4739-84d6-e53df6b4da53" />
 
 Verilog Code for 1x8 DEMUX using For Loop:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 demux_generate v" src="https://github.com/user-attachments/assets/c7774af1-e7a6-4d07-b638-fbc68c4ac23b" />
 
 It's gtkwave:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 tb_demux_generate vcd" src="https://github.com/user-attachments/assets/00686657-bf0d-4b51-9f88-7bec74ecaab8" />
 
 It's Yosys Output:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 demux_generate" src="https://github.com/user-attachments/assets/6585c588-cc64-4654-869a-4329cac88ec1" />
 
 Verilog Code for 8-bit Ripple Carry Adder with Generate Block
-![Alt Text](Palak_ysoys.png)
-![Alt Text](Palak_ysoys.png)
-
+<img width="1917" height="1076" alt="Day 5 rca v" src="https://github.com/user-attachments/assets/9db891ce-cf18-447e-b14e-cc5d19a290cf" />
+<img width="1917" height="1076" alt="Day 5 fa v" src="https://github.com/user-attachments/assets/77dfbe3f-e153-4678-b5d8-f4b8b49a7d33" />
 It's gtkwave:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 tb_rca vcd" src="https://github.com/user-attachments/assets/45d0eda1-ec52-4b84-8b8b-ea13730cca50" />
 
 It's Yosys Output:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 5 fa" src="https://github.com/user-attachments/assets/a3979ca4-3814-4244-ac6d-a7910443dcf1" />
+
+
 
 
 To prevent unintended latches, make sure all if-else and case constructs cover every possible condition. Leveraging for loops and generate blocks helps create clean, reusable, and synthesizable designs, especially for repetitive structures. In combinational logic, every signal should be assigned in all possible scenarios to ensure predictable behavior. Hands-on labs provide an excellent opportunity to apply these principles, observe synthesis results, and gain practical experience with robust Verilog coding practices.
