@@ -28,38 +28,41 @@ Verilog provides two types of assignments in procedural blocks: blocking (=) and
 ## Labs on GLS and Synthesis-Simulation Mismatch
 
 2x1 MUX using a ternary operator is given below:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 ternary_operator_mux v" src="https://github.com/user-attachments/assets/01e43628-8187-4217-b15c-ba3b37dd87a0" />
 
 The gtkwave for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 tb_ternary_operator_mux vcd" src="https://github.com/user-attachments/assets/7b13756b-491b-4fbf-9f9c-65878f20c1e0" />
 
 The Yosys output for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 ternary_operator_mux" src="https://github.com/user-attachments/assets/2efd65ec-647e-4441-9709-686d8a192052" />
 
 GLS gtkwave for above synthesized file:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 tb_ternary_operator_mux vcd 2" src="https://github.com/user-attachments/assets/c6a7abcd-d8f3-4b42-bf6a-6abff1cdbc2f" />
 
 Now,following is the verilog code which has got some deliberate error like the sensitivity list is incomplete and should include all relevant signals, specifically i0, i1, and sel. Additionally, a non-blocking assignment is used in combinational logic, whereas blocking assignments (=) would be more appropriate in this context.
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 bad_mux v" src="https://github.com/user-attachments/assets/6885b28f-f38b-4643-beda-94739a09629c" />
 
 The gtkwave for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 tb_bad_mux vcd" src="https://github.com/user-attachments/assets/ed611e25-08a5-4739-addd-442cfdbb2d86" />
 
 GLS gtkwave for above code:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 tb_bad_mux vcd 2" src="https://github.com/user-attachments/assets/7e4614cb-4394-43cb-98f0-ecdbd8252049" />
 
 
 ## Labs on synth-sim mismatch for blocking statement
 In the context of blocking assignments (=) in Verilog, synthesis-simulation mismatches can occur when the intended sequential behavior is incorrectly modeled as combinational. Since blocking statements execute immediately and in order, using them in sequential logic (e.g., inside a clocked always block) can lead to simulation results that differ from the synthesized hardware, where flip-flops and registers follow clock edges. To avoid such mismatches, blocking assignments should generally be reserved for combinational logic, ensuring that the simulation closely reflects the behavior of the synthesized design.
 
 Here is the example file for above problem statement where the problem is because of the way the assignments are ordered, d ends up taking the earlier value of x instead of the updated result. A better approach is to ensure that all temporary or intermediate values are calculated first before being utilized in later expressions.
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 blocking_caveat v" src="https://github.com/user-attachments/assets/cb0e25d1-dbfa-4bda-b132-581aa60dbbd1" />
 
 The gtkwave for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 tb_blocking_caveat vcd" src="https://github.com/user-attachments/assets/60e899fd-f6ad-4810-9e41-8ccb19b252aa" />
 
 The Yosys output for above code is:
-![Alt Text](Palak_ysoys.png)
+<img width="1917" height="1076" alt="Day 4 blocking_caveat" src="https://github.com/user-attachments/assets/3fa93a62-f045-4491-b5de-78da5647c69d" />
+
+GLS gtkwave for above code:
+<img width="1917" height="1076" alt="Day 4 tb_blocking_caveat vcd 2" src="https://github.com/user-attachments/assets/b2257549-90da-4c05-8b2a-10a15c02fc15" />
 
 Gate-Level Simulation (GLS) plays a crucial role in verifying that a synthesized netlist behaves correctly, meets timing requirements, and maintains test structures like scan chains. Differences between RTL simulation and post-synthesis behavior, known as synthesis-simulation mismatches, often arise from unclear or non-synthesizable coding, so writing precise and fully synthesizable RTL is essential to prevent unexpected results. In Verilog, proper use of assignments is key: blocking assignments (=) are best suited for modeling combinational logic, while non-blocking assignments (<=) accurately represent sequential circuits triggered by clock edges. Hands-on labs complement these concepts by providing practical experience, helping learners identify and avoid common pitfalls in RTL coding and ensuring that simulations align closely with actual synthesized hardware behavior.
 
