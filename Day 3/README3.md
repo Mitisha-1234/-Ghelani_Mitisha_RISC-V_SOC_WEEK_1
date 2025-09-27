@@ -58,8 +58,34 @@ Do the same for all 7 files and observe the yosys output:
 ## Sequential Logic Optimizations
 Sequential logic optimization focuses on improving circuits that use memory elements like flip-flops and latches. The goal is to reduce area, power, and delay while keeping the same behavior. Common techniques include retiming (moving registers to balance delays), state optimization (simplifying FSMs), and register sharing or removal. These methods help designs run faster and use fewer resources. 
 
-I have shown one example of Sequential Logic Optimizations
+I have shown one example of Sequential Logic Optimization.
+Below is the verilog file
+![Alt Text](Palak_ysoys.png)
 
+Follow the steps from Day 1 to observe the gtkwave:
+![Alt Text](Palak_ysoys.png)
+
+Follow the steps from Day 1 to observe the ysoys outptut:
+![Alt Text](Palak_ysoys.png)
+
+## Sequential optimization for unused output
+If a flip-flop or register drives an output that is never used in the design, synthesis tools can remove it. This prevents unnecessary storage elements, reduces area, and lowers power consumption without affecting the circuit’s functionality. 
+
+Below is the verilog code for unused output:
+![Alt Text](Palak_ysoys.png)
+
+Below is the verilog code when all counter bits are used:
+![Alt Text](Palak_ysoys.png)
+
+Below is the synthesized netlist visualization for the above code:
+
+![Alt Text](Palak_ysoys.png)
+You can see that Yosys optimizes away the unused bits of the counter, keeping only the logic required for count[0].
+
+![Alt Text](Palak_ysoys.png)
+This time, the full counter logic is preserved since all bits of count are required to compute the output.
+
+This course focuses on improving the efficiency of combinational and sequential digital circuits through practical Verilog exercises. It covers techniques like constant propagation to simplify logic, state optimization to reduce and encode FSM states efficiently, cloning to enhance timing and balance load, and retiming to reposition registers for better performance. Six hands-on labs demonstrate these concepts with examples of optimized combinational circuits and D flip-flop behaviors, including code snippets and output visualizations.
 
 
 
