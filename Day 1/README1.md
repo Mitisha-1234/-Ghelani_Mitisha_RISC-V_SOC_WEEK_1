@@ -54,10 +54,14 @@ iverilog good_mux.v tb_good_mux.v
 ```bash
 gtkwave tb_good_mux.vcd
 ```
-![Alt Text](Day 1 gtkwave.png)
+<img width="1917" height="1076" alt="Day 1 gtkwave" src="https://github.com/user-attachments/assets/f65616dd-d00f-4ad9-9fa3-6017fa79e2cf" />
+
+
+
 
 Code of good_mux.v and tb_good_mux.v
-![Alt Text](Day 1 gtkwave.png)
+
+<img width="1917" height="1076" alt="day 1 verilog code" src="https://github.com/user-attachments/assets/45d0ef38-d1f4-4326-9e78-f3ba27679df5" />
 
 Working:
 1.Inputs: i0, i1 (data signals), sel (control signal)
@@ -85,7 +89,7 @@ abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```bash
 show
 ```
-![Alt Text](Day 1 gtkwave.png)
+<img width="1917" height="1076" alt="Day 1 yosys block" src="https://github.com/user-attachments/assets/bca2bc1e-ff31-4594-9929-dc88593bcba2" />
 
 From this Day 1, I gained following insights:
 1.I understood the purpose of simulators and how they help check circuit behavior.
